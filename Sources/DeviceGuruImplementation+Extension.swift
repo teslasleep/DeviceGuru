@@ -2,7 +2,7 @@
 public extension DeviceGuruImplementation {
 
     /// This should be same as cocoa pod version
-    static var libraryVersion: String { "10.0.12" }
+    static var libraryVersion: String { "10.0.13" }
 
     var hardware: Hardware {
 
