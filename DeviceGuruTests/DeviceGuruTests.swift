@@ -33,11 +33,11 @@ final class DeviceGuruTests: XCTestCase {
         let result = try sut.hardwareDescription()
 
         // then
-        XCTAssertEqual(result, "iPhone 17 Pro Max")
+        XCTAssertEqual(result, "iPhone Duo")
         XCTAssertEqual(localStorageMock.dictionary.keys.count, 2)
 
         let hardwareDetail = localStorageMock.dictionary[Constants.hardwareDetailKey] as? [String: String]
-        XCTAssertEqual(hardwareDetail, ["name": "iPhone 17 Pro Max"])
+        XCTAssertEqual(hardwareDetail, ["name": "iPhone Duo"])
 
         let deviceGuruVersion = localStorageMock.dictionary[Constants.deviceGuruVersionKey] as? String
         XCTAssertEqual(deviceGuruVersion, currentLibraryVersion)
@@ -66,13 +66,13 @@ final class DeviceGuruTests: XCTestCase {
         let result = try sut.hardwareDescription()
 
         // then
-        XCTAssertEqual(result, "iPhone 17 Pro Max")
+        XCTAssertEqual(result, "iPhone Duo")
         XCTAssertTrue(localStorageMock.getObjectCalled > 0)
         XCTAssertTrue(localStorageMock.setValueCalled > 0)
     }
 
     func testHardwareString() {
-        hardwareDetailProviderMock.hardwareString = "iPhone12,8"
+        hardwareDetailProviderMock.hardwareString = "iPhone19,4"
         XCTAssertEqual(sut.hardwareString, hardwareDetailProviderMock.hardwareString )
     }
 
@@ -80,10 +80,10 @@ final class DeviceGuruTests: XCTestCase {
         hardwareDetailProviderMock.hardwareString = "iPad8,8"
 
         let simpleName = try sut.hardwareSimpleDescription()
-        XCTAssertEqual(simpleName, "iPad Pro 12.9-inch")
+        XCTAssertEqual(simpleName, "iPad Pro 3")
 
         let name = try sut.hardwareDescription()
-        XCTAssertEqual(name, "iPad Pro 12.9-inch (1TB, Wi-Fi + Cellular, 3rd generation)")
+        XCTAssertEqual(name, "iPad Pro 3 (12.9-inch, Cellular, 1TB Model)")
     }
 
     func testHardwareVersion() throws {
@@ -99,7 +99,7 @@ final class DeviceGuruTests: XCTestCase {
 extension DeviceGuruTests {
 
     func testPlatformForIPhone() {
-        hardwareDetailProviderMock.hardwareString = "iPhone12,8"
+        hardwareDetailProviderMock.hardwareString = "iPhone19,4"
         XCTAssertEqual(sut.platform, .iPhone)
     }
 
