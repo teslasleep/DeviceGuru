@@ -1,4 +1,3 @@
-//source https://api.ipsw.me/v4/devices
 [
     {
         "name": "iPhone 2G",
@@ -4621,5 +4620,37 @@
         "platform": "t8152",
         "cpid": 33106,
         "bdid": 36
+    },
+    {
+        "name": "iPhone Duo",
+        "identifier": "iPhone19,4",
+        "boards": [
+            {
+                "boardconfig": "V68AP",
+                "platform": "t8160",
+                "cpid": 33120,
+                "bdid": 14
+            }
+        ],
+        "boardconfig": "V68AP",
+        "platform": "t8160",
+        "cpid": 33120,
+        "bdid": 14
+    },
+    {
+        "name": "HomePod mini 2",
+        "identifier": "AudioAccessory11,1",
+        "boards": [
+            {
+                "boardconfig": "B525AP",
+                "platform": "t8310",
+                "cpid": 33552,
+                "bdid": 66
+            }
+        ],
+        "boardconfig": "B525AP",
+        "platform": "t8310",
+        "cpid": 33552,
+        "bdid": 66
     }
 ]
