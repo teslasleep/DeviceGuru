@@ -223,6 +223,7 @@ public extension DeviceGuruImplementation {
         if (hardwareString == "iPhone18,5") { return .iphone_17_e }
         if (hardwareString == "iPhone19,2") { return .iphone_18_pro }
         if (hardwareString == "iPhone19,3") { return .iphone_18_pro_max_us }
+        if (hardwareString == "iPhone19,4") { return .iphone_duo }
         if (hardwareString == "iPhone19,7") { return .iphone_18_pro_max }
         if (hardwareString == "iPhone2,1") { return .iphone_3gs }
         if (hardwareString == "iPhone3,1") { return .iphone_4 }
